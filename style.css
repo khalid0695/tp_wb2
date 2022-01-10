@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,500&family=Open+Sans:ital,wght@1,600&family=Playfair+Display:ital,wght@1,700&family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&family=Playfair+Display:ital,wght@1,700&family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,500&family=Open+Sans:ital,wght@1,600&family=Playfair+Display:ital,wght@1,700&family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap');
+
 *{
 	text-decoration: none;
 margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 }
-a:visited  {
-	color: inherit;
-  }
+/*navigation bar css*/
 nav{
    position: fixed;
    width: 100%;  
    font-family: 'Ubuntu',sans-serif;
    } 
+nav.sticky{
+	padding: 13px 0;
+	background-color: #4070f4 ;
+	}
 nav .navbar{
 display: flex;
 align-items: center;
@@ -23,10 +26,6 @@ padding: 20px 0px;
 width: 90%;
 margin: auto;
 transition: all 0.4s ease;
-}
-nav.sticky{
-padding: 13px 0;
-background-color: #4070f4 ;
 }
 nav .navbar .menu{
 	display: flex;
@@ -44,23 +43,26 @@ margin: 0 8px;
 list-style: none;
 font-size: 18px;
 font-weight: 500;
-color: 	#313950 ;}
-nav.sticky .navbar .menu li a{
-color: #fff ;}
-
-
-
+}
 nav .navbar .media a{
 	font-size: 18px;
 	margin: 0 6px;
 	color: #4070f4;
      }
+nav.sticky .navbar .menu li a,nav.sticky  .menu-btn{
+color: #fff ;
+}
+nav.sticky  .menu-btn{
+	 padding: 13px 0;
+}
 nav.sticky .navbar .media a{
 	color: #fff;
-
 }
 nav .navbar .menu .cancel-btn,nav .menu-btn{
 display: none;
+}
+nav .navbar .menu .cancel-btn{
+	color: #fff;
 }
 @media only screen and (max-width: 768px) {
 nav .navbar .menu{
@@ -78,14 +80,15 @@ nav .navbar .menu{
 			          }
 nav .navbar.active .menu{
 		left: 0%;
-
 }
-
 .navbar .menu li a{
 	display: block;
 	font-size: 23px;
 	margin: 10px 0;
-	color: rgb(122, 199, 223);
+	color:#4070f4
+	}
+	.navbar .menu li a:hover{
+		color:#4070f4;
 	}
 	nav .navbar .media a{
 		display: none;
@@ -93,25 +96,17 @@ nav .navbar.active .menu{
 	nav .navbar .menu .cancel-btn,nav .menu-btn{
 		position: absolute;
 		font-size: 20px;
-		right: 20px;
-		top: 20px;
-		color: white;
+		right: 30px;
+		top: 30px;
+		color: rgb(55, 152, 197);
 		display: block;
 	 }
-	 nav .menu-btn{
-	 color:#4070f4 ;
+	 
 }
-nav .navbar .menu .cancel-btn,nav .menu-btn{
-	color: #fff;
-}
-}
-nav.sticky{
-	padding: 10px 0;
-	background-color:#4070f4 ;
-}
+
 .home{
 
-font-family: 'Genos', sans-serif;
+font-family: 'Ubuntu', sans-serif;
 height: 100vh;
 width: 100%;
 background:url(IMAGES/bgimage.jpg) no-repeat;
@@ -121,7 +116,7 @@ background-size: cover;
 
 }
 .home .home-content{
-	margin: 0 20px;
+margin: 0 20px;
 height: 100vh;
 width: 90%;
 display: flex;
@@ -135,30 +130,39 @@ justify-content: center;
 	
 }
 .home .home-content .textOne {
-font-size: 40px;
+font-size: 25px;
 color: #000;
 }
 .home-content .textTwo {
-font-size: 70px;
-color: #000
+font-size: 75px;
+color: #000;
+font-weight: 600;
+font-family: 'Genos', sans-serif;
+	
+}
+.home-content .textTwo span{
+	font-weight: 300;
+	font-size: 40px;
 }
 .home-content .textThree {
-font-size: 30px;
+font-size: 23px;
 color: #000
 }
 .home-content .textFour {
-font-size: 45px;
+font-size: 40px;
 color: #000
 }
 .home-content .textFour span{
-color: #370617;
+color: #201d1d;
+font-weight: 500;
+text-shadow: #080808;
 }
 .home button{
 	font-size: 30px;
 	font-family: 'Ubuntu',sans-serif;
 	background-color: #03045e;
 	padding: 10px 10px ;
-  border: 5px ;
+  	border: 5px ;
 	border-radius: 5px;
 	color: white;
    position: center;
@@ -167,10 +171,9 @@ color: #370617;
 .about .right img {
 width: 200px ;
 height: 200px;
-object-fit: cover;
 border-radius: 100px;
 margin:  0 100px;
-align-items: baseline;
+justify-content: center;
 }
 .title{
 font-size: 64px;
@@ -181,7 +184,10 @@ left: 100px;
 top: 50px;
 clear: left;}
 .about{
-display: flex;}
+display: flex;
+ 
+ align-content: space-between;
+}
 .about .left p{
 	width: 90%;
 	text-align: justify;
