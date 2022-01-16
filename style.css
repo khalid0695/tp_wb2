@@ -16,6 +16,7 @@ nav{
 nav.sticky{
 	padding: 13px 0;
 	background-color: #4070f4 ;
+	z-index: 100;
 	}
 nav .navbar{
 display: flex;
@@ -46,14 +47,14 @@ list-style: none;
 .navbar .menu li a{
 font-size: 25px;
 font-weight: 500;
-color: cadetblue;
+color: #0e2431;
 transition: all ease 0.4s;
 }
 .navbar .menu li a:hover{
 	color: #4070f4;
 }
 nav.sticky .navbar .menu li a:hover{
-	color: cadetblue;
+	color: #0e2431;
 }
 nav .navbar .media a{
 	font-size: 18px;
@@ -110,7 +111,6 @@ nav .navbar.active .menu{
 		color: rgb(55, 152, 197);
 		display: block;
 	 }
-	 
 }
 /*home section*/
 .home{
@@ -135,26 +135,29 @@ justify-content: center;
 }
 .home .home-content .textOne {
 	font-size: 25px;
-	color: #000;
+	color: #0e2431;
 	}
 	.home-content .textTwo {
 	font-size: 65px;
-	color: #000;
 	font-weight: 600;
 	font-family: 'Genos', sans-serif;
-	margin-left: -3px; 
+	margin-left: -3px;
+	color: #0e2431; 
 	}
-	
-	
 	.home-content .textThree {
 	font-size: 40px;
+	color: #0e2431;
 	}
 	.home-content .textFour {
 	font-size: 23px;
 	margin-bottom: 30px  ;
+	color: #0e2431;
+	}
+	.home .button{
+		margin: 14px 0;
 	}
 	.home .button button{
-		 outline: none;
+		outline: none;
 		font-size: 25px;
 		font-weight: 500;
 		background-color: #4070f4 ;
@@ -171,6 +174,119 @@ justify-content: center;
 	 border: 2px solid ;
 	   border-radius: 5px;
 	}
+	/*about css section*/
+	.about .centent{
+		width: 85% ;
+		margin: 40px auto;
+		font-family: "Poppins",sans-serif;
+
+	}
+	section .title{
+	display: flex;
+	justify-content: center;
+	
+	}
+section .title span{
+	    font-size: 30px;
+		font-weight: 600;
+		padding-bottom: 8px	;
+		position: relative; 
+		margin: 20px 0;
+		color: #0e2431;
+		z-index: auto;
+	}
+section .title span::before,
+section .title span::after{
+		content:'';
+		position: absolute;
+		left:0;
+		bottom:0;
+		width: 100%;
+		height: 3px;
+		background: #4070f4; 
+	  }
+section .title span::after{
+		left:50%;
+		transform: translateX(-50%);
+		width: 70%;
+		bottom: -7px;
+		}
+section .about-ditails{
+		display: flex;
+		align-items: center;
+		justify-content:space-between;
+	}
+.about-ditails .right{
+		width: 55%;
+	}
+.about-ditails .left{
+		width: 45%;
+	}
+section .topic{
+		font-size: 25px;
+		font-weight: 600;
+		color: #0e2431;
+		margin-bottom: 10px;
+	}
+section p{
+		text-align: justify;
+	}
+section .about-ditails .right img{
+		width: 400px;
+		height: 400px;
+		border-radius: 20px	;
+		object-fit: cover;
+		} 
+		section .button{
+			margin: 14px 0;
+		}
+		section .button button{
+			outline: none;
+		   font-size: 25px;
+		   font-weight: 500;
+		   background-color: #4070f4 ;
+		   color: white;
+		   padding: 8px 16px ;
+			 border: 2px solid transparent;
+		   border-radius: 5px;
+		   transition: ease all 0.3s;
+	   }
+	    section .button button:hover{
+		   color: #4070f4;
+		  background-color: white ;
+		  padding: 8px 16px ;
+		border: 2px solid ;
+		  border-radius: 5px;
+	   }
+ @media only screen and (max-width: 1070px){
+	section .centent{
+
+		width: 80% ;
+		margin: 40px auto;
+		font-family: "Poppins",sans-serif;
+
+	}
+	@media only screen and (max-width: 1070px){
+		section .about-ditails  .right img{
+			width: 350px;
+			height: 350px;
+			} 
+			@media only screen and (max-width: 909px){
+				 .about .about-ditails{
+					flex-direction: column;
+					justify-content: center;
+					
+				}
+				.about .about-ditails .right{
+					width: 100%;
+					display: flex;
+					justify-content: center;					
+					}
+					.about-ditails .left{
+						width: 90%;
+						margin: 40px 0;
+					} 
+}
 	@media only screen and (max-width: 769px){
 	
 			.home-content .textTwo {
@@ -195,10 +311,8 @@ justify-content: center;
 		font-size: 45px;
 		margin-left: -3px; 
 		}
-		
 		.home-content .textThree {
 		font-size: 25px;
 		}
 		}
 
-	/* about css section */
