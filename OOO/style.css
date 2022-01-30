@@ -11,12 +11,9 @@ nav{
    position: fixed;
    width: 100%;  
    font-family: 'Ubuntu',sans-serif;
-   } 
-nav.sticky{
-	padding-right: 13px ;	
-	background-color: #4070f4 ;
-	z-index: 100;
-	}
+   height: 80px;
+}
+
 nav .navbar{
 display: flex;
 align-items: center;
@@ -45,22 +42,21 @@ margin: 0 8px;
 list-style: none;
 }
 .navbar .menu li a{
-	text-transform: capitalize;
     font-size: 18px;
     font-weight: 500;
-    color:  #332614;
+    color: #5c392a	;
     transition: all ease 0.4s ;
 }
 .navbar .menu li a:hover{
 	color: #4070f4;
 }
 nav.sticky .navbar .menu li a:hover{
-	color: #332614;
-
+	color: #5c392a;
 }
 nav .navbar .media a{
 	font-size: 18px;
 	margin: 0 6px;
+	color: #4070f4;
      }
 nav.sticky .navbar .menu li a,nav.sticky  .menu-btn{
 color: #fff ;
@@ -93,15 +89,9 @@ nav .navbar .menu{
 }
 nav .navbar.active .menu{
 		left: 0%;
-		color: #fff;
-}
-nav .navbar.active .menu li a{
-	
-	color: #fff;
-}
-nav .navbar.active .menu li a:hover{
-	color: #4070f4;
 
+
+		
 }
 .navbar .menu li a{
 	display: block;
@@ -117,11 +107,8 @@ nav .navbar.active .menu li a:hover{
 		font-size: 20px;
 		right: 30px;
 		top: 30px;
+		color: #4070f4;
 		display: block;
-	 }
-	 nav .menu-btn {
-		 color: #4070f4;
-		 cursor: pointer;
 	 }
 }
 /*home section*/
@@ -146,7 +133,7 @@ background-attachment: fixed;
 	text-align: center;
 }
 .home .home-content{
-margin: auto;
+margin: 0 20px;
 height: 100vh;
 width: 90%;
 display: flex;
@@ -185,13 +172,10 @@ text-align: left;
 text-align: left;
 
 	}
-	.home .button img{
-		vertical-align: sub;}			
-		.home .button{
+	.home .button{
 		margin: 14px 0;
 	}
 	.home .button button{
-
 		outline: none;
 		font-size: 25px;
 		font-weight: 500;
@@ -308,12 +292,10 @@ section p{
 		{
 			width:50%
 		}
-		  section p{
+		.skills-details p{
 			color:#0e2431;
 			text-align:justify;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 1.45;
+			font-size: 20px;
 			}
 		.skills .skills-details .experience
 		{display:flex;
@@ -344,12 +326,7 @@ section p{
 		.skills-details .boxes .per
 		{font-size:60px;
 		color:#4070f4}
-		section{
-			padding-top: 40px;
-		}
-		
 	section .content{
-		
 		width: 85% ;
 		margin: 20px auto;
 		font-family: "Poppins",sans-serif;
@@ -389,56 +366,6 @@ section p{
 		transition:all .4s ease}
 	.services .boxes .box:hover .topic,.services .boxes .box:hover p
 	{color:#fff}
-		.pomo,#pomo2{
-			background: linear-gradient(
-217deg
-, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(
-127deg
-, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(
-336deg
-, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-			background-size:cover;
-			width: 100%;
-			height: 100%;
-			border-radius: 15px;
-		}
-		.pomo .topic {
-			margin-left:0;
-			background-color:#ffffff;
-			width:300px;border-radius: 10px 0;
-			height: 50px;
-			font-size: 30px;
-			font-size: 25px;
-			font-weight: 500;
-			color: #2a2438;
-			margin-bottom: 20px;
-			padding: auto;
-			font-family: 'Ubuntu',sans-serif;	
-			text-align: center;
-			}
-		.pomo p{
-			transform:translateX(50%);
-			background-color: #40b2f4d2;
-			width: 60%;
-			margin: 30px;
-			font-size: 16px;
-			font-weight: 500;
-			padding: 30px;
-			line-height: 1.5;
-			border-radius: 15px 15px 0 0;
-			font-family: 'Ubuntu',sans-serif;	
-		white-space: pre-wrap;	}
-		#pomo2{
-			background-image:url(IMAGES/img.jpg) ;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 1.5;
-		}
-		section.pomos{
-			max-width: 80%;
-			margin: auto;
-
-		}
 @media only screen and (max-width: 1070px){
 		section .about-ditails  .right img{
 			width: 350px;
@@ -465,14 +392,7 @@ section p{
 	.services .boxes .box{
 		width: calc(100%/2 - 20px);
 	}
-	.pomo p{
-		transform:translateX(20%);
-		
-		width: 70%;
-		
-	}
 }
-
 	 @media(max-width: 613px){
 	.home-content .textTwo {
 				font-size: 55px;
@@ -484,41 +404,8 @@ section p{
 			  .home-content .textFour {
 					font-size: 25px;
 					margin: 5px 0;
-
 								}
-			.pomo p{
-				transform: translateX(0);
-				width: 80%;
-				
-			font-size: 16px;
-				
-			}
 	} 
-	::-webkit-scrollbar{width:10px}
-	::-webkit-scrollbar-track{background:#f1f1f1}
-	::-webkit-scrollbar-thumb{background:#6e93f7;border-radius:12px;transition:all .3s ease}
-	::-webkit-scrollbar-thumb:hover{background:#4070f4}
-	.contact{background:#f0f8ff}
-	.contact .content{margin:0 auto;padding:30px 0}
-	.contact .text{width:80%;text-align:center;margin:auto
-	}
-	.contact .text p{  
-		
-		max-width: 80%;
-		margin: 30px auto;
-		font-size: 16px;
-		font-weight: 500;
-		font-family: 'Ubuntu',sans-serif;
-		padding: 30px;
-		text-align: center;
-		line-height: 1.5;}
-	footer{background:#474b52;padding:15px 0;text-align:center;font-family:poppins,sans-serif}
-	footer 
-	footer .text span a{font-weight:500;color:#fff}
-	footer .text span a:hover{text-decoration:underline}
-	div.scroll-button a{position:fixed;bottom:20px;right:20px;color:#fff;background:#4070f4;padding:7px 12px;font-size:18px;border-radius:6px;box-shadow:rgba(0,0,0,.15);
-	}
-	.contact .text{width:100%}
 	@media(max-width: 512px){
 		.home-content .textTwo {
 					font-size: 50px;
@@ -537,7 +424,7 @@ section p{
 		.skills .skills-details
 		{width: 100%;
 		 display:flex;
-		 justify-content:center;
+		 justify-content:space-between;
 		 align-items:center;
 	 }	
 	 .skills content{
@@ -548,53 +435,29 @@ section p{
 		
 		.skills .skills-details
 		{
-		width: 100%;
+			width: 100%;
 		flex-direction: column;
 	 }		
-	 .skills-details .text{
-		margin: 0;
-		width: 100%;
-	 }
-	 /* ,*/.skills .skills-details .boxes{ 
+	 .skills-details .text,.skills .skills-details .boxes{
 		 margin: 0;
-		 width: 100%;
-		 display: flex;
+		 width: 80%;
 	 }
 	 
 	 .services .boxes .box{
 		width: 100%;
-		justify-content: center;
 	}
 	section .about-ditails .right img {
 		width: 80%;
 		height: 80%;
-		}
-		.pomo p{
-			width: 80%;
-			transform: translateX(0);
 		} }
 		@media(max-width: 347px){
 			.about-ditails img{
 				width: 80%;
 				height: auto;
 			}
-			.pomo .topic {
-				
-				width:150px;border-radius: 10px 0;
-				height: 100%;
-				font-size: 20px;
-				font-size: 25px;
-				font-weight: 400;
-				margin-bottom: 10px;
-				}
 			.home-content .textTwo {
 
 				font-size: 60px;}
-				section.pomos{
-					max-width: 80%;
-					margin: auto;
-		
-				}
 		}
 		
 		

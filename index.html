@@ -2,24 +2,24 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="IMAGES/logo.svg">
 		<title>pratique HTML</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="https://kit.fontawesome.com/c76ab6e72c.js" crossorigin="anonymous">	
+		<script src="https://kit.fontawesome.com/c76ab6e72c.js" crossorigin="anonymous">
+			
 		</script>
 	</head>
 	<body >
 		<nav id="nav" >
 			<div class="navbar" id="navbar">
 				<div class="logo"><a href="#">&lt;! <i class="fas fa-rocket"></i>&gt;</a></div>
-				<ul class="menu">
-					<li><a href="#home">accueil</a></li>
-					<li><a href="#about">a propos</a></li>
-					<li><a href="#skills">competence </a></li>
-					<li><a href="#serveces">serveces</a></li>
-					<li><a href="login.html"><span>    	</span><i class="fas fa-user-graduate"></i></a></li>
+				<ul class="menu" id="menu">
+					<li><a href="#home" onclick='f()'>accueil</a></li>
+					<li><a href="#about" onclick='f()'>a propos</a></li>
+					<li><a href="#skills" onclick='f()'>competence </a></li>
+					<li><a href="#services" onclick='f()'>serveces</a></li>
+					<li><a href="https://mailchi.mp/a32ac1273b72/sign-up" target="_blank" onclick='f()'><span>    	</span><i class="fas fa-user-graduate"></i></a></li>
 					<div class="cancel-btn" id="cancel_btn"><i class="fas fa-times"></i></div>
 				</ul>
 				<div class="media">
@@ -32,16 +32,16 @@
 		</nav>
 		<section class="home" id="home">
 			<div class="home-content">
-				<div class="img"><img src="IMAGES/logofs.png" alt=""></div>
 				<div class="text">
 					<p class="textOne">bonjour,</p>
 					<p class="textTwo">Je suis  khalid <span style="white-space: nowrap;">el issaoui </span></p>
 					<p class="textThree">Devloppeur FullStack</p>
 					<p class="textFour">de moroc</p>
 				</div>
-				<div class="button"><button>haire me</button></div>
+				<a href="pomodo.html"><div class="button"><button>  pomodor <img src="IMAGES/tomato.png" width="30px" height="30px"> App</button></div></a>
 			</div>
 		</section> 
+		<!-- about section -->
 		<section class="about" id="about">
 			<div class="content">
 				<div class="title"> <span> a propos </span></div>
@@ -50,15 +50,7 @@
 					<img src="IMAGES/pic.jpg" alt="profile">
 				</div>
 				<div class="left">
-					<div class="topic">ma passion est le devloppement web&personnelle</div>
-					<p>l'objectif de ce projet est de mettre a votre dispostion un site web
-						 qui vos permtre la gestion votre apprantissage en utilsant des outil 
-						 d'informatique dicisionnelle ou ce qu'on appelle business intellgence
-						qui vous  permet de visualiser votre progrés et de vous aider à prendre
-						les bonnes dicisions pour atiendre votre objectif ,mon objectif  devlopper 
-						ensemble un etat d'espret de croissance grace à des nouvelles theorie d'autodidacte 
-						et des methode de travail universitaire et des autres recherches de noeurosciences,
-						qui nous facilte la tahe pour un parcour d'apprantissage riche </p>
+					<div class="topic"><p>l'objectif de ce projet est de mettre à votre disposition un site web qui vos permettre la gestion de votre parcours d’apprentissage en se basons sur des outil de l'informatique décisionnelle ou ce qu'on appelle business intelligence ces outille permet de visualiser votre progrès afin de vous aider à prendre les bonnes décisions pour atteindre votre objectif ,mon objectif c’est de adopter ensemble l’état d'esprit de croissance, grâce à des nouvelles théorie d'autodidacte  et des méthodes de travail universitaire et des autres recherches des neurosciences, on peut apprendre n’importe quel compétence mais deux ingrédient sont indispensable notamment la discipline et la bonne gestion du temps. Nous souhaitons que qui nous facilite la tâche pour un parcours d'apprentissage riche </p>
 					<div class="button"><button>Telecharger cv</button></div>
 				</div>
 			</div>
@@ -73,7 +65,7 @@
 					<div class="skills-details">
 					<div class="text">
 					<div class="topic">La compétence c'est la reflection de nos savoir</div>
-					<p><span class="lettrine">L</span>a compétence n'est pas équivalente à la connaissance loin s'en faut. Être compétent c'est posséder les bonnes connaissances mais c'est aussi et surtout adopter les bonnes attitudes et mettre en pratique les bonnes aptitudes selon les situations. Précisons cette définition pour mieux comprendre.</p> 
+					<p><strong class="lettrine">L</strong>a compétence n'est pas équivalente à la connaissance loin s'en faut. Être compétent c'est posséder les bonnes connaissances mais c'est aussi et surtout adopter les bonnes attitudes et mettre en pratique les bonnes aptitudes selon les situations. Précisons cette définition pour mieux comprendre.</p> 
 					<div class="experience">
 					<div class="num">05</div>
 					<div class="exp">Ans <br> D'experience</div>
@@ -102,10 +94,10 @@
 					</section>
 			</section>
 			<!-- cours section -->
-			<section class="services">
+			<section class="services" id="services">
 			<div class="content">
 				<div class="title"><span>My Services</span></div>
-				 <div class="boxes">
+				 <div class="boxes" onclick="location.href='OOO/cours.html';">
 					<div class="box" >
 						<div class="icon">
 						<i class="fas fa-desktop"></i>
@@ -142,7 +134,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
 					</div>
 					<div class="box">
-						<div class="icon">
+					<div class="icon">
 						<i class="fas fa-tablet-alt"></i>
 						</div>
 						<div class="topic">Apps Devlopment</div>
@@ -150,10 +142,37 @@
 				    </div>
 			    </div> 
 			</div>
-			</section>	
+		</section>
+		<section class="pomos">
+			<div class="pomo" id="pomo">
+				<div class="topic"><span>Technique pomodoro</span></div>
+				<p>Le multitâche connait des limites en terme de productivité personnelle. La technique Pomodoro apporte justement une méthode pour se concentrer intensément sur une tâche à la fois sans se laisser perturber par des événements extérieurs. La lutte contre la procrastination est engagée ! Découvrez et utilisez une méthode simple et efficace pour vous focaliser sur votre travail sans vous laisser distraire par votre environnement.</p></div>
+				<div class="pomo 2" id="pomo2">
+					<div class="topic"><span>Le principe du Pomodoro</span></div>
+					<p>
+						L'objectif est de rester concentré à 100% sur une seule et unique tâche pendant <strong>25mn </strong>(appelé session).  Une courte pause sépare chaque session. Puis un break plus long intervient après plusieurs sessions. Bref, cette technique est très simple à utiliser : il suffit de <a href="pomodo.html"> Pomodoro </a> et d'une discipline de fer ! Tout en étant rudement efficace.</p></div>
+			</section>
+			<!-- section contact -->
+			<section class="contact" id="contact">
+				<div class="content">
+				<div class="title"><span>Contact Me</span></div>
+				<div class="text">
+				<div class="topic">Have Any Project?</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam neque ipsum corrupti dolores, facere numquam voluptate aspernatur sit perferendis qui nisi modi! Recusandae deserunt consequatur voluptatibus alias repellendus nobis eligendi.</p>
+				<div class="button">
+				<button>Let's Chat</button>
+				</div>
+				</div>
+				</div>
+			</section>
+			<div class="scroll-button " id="scrollButton">
+				<a href="#home" style="display: block;"><i class="fas fa-arrow-up"></i></a>
+				</div>
+				<footer>
+					<div class="text">
+					<span>créé par  <a href="#" style="color: rgb(151, 211, 252);">moi</a> | © 2022 Tous droit  Reservé</span>
+					</div>
+				</footer>	
 		<script type="text/javascript" src="javascrip.js">	</script>
-		
-
-
-	</body>	
+</body>	
 </html>
