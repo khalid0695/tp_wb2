@@ -13,6 +13,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+       nav{
+           position: relative;
+           top:0;
+       }
         
           .titre{
             text-align: center;
@@ -22,18 +27,19 @@
             margin-bottom: 20px ;
             text-shadow: 2px 2px 2px #ff00006b;        }
         body{
-            background-image:url(IMAGES/time.jpg), linear-gradient(50deg, rgba(236, 100, 134, 0.836) 50%, rgb(0, 234, 255) 50% 50%);
+            background-image:linear-gradient(320deg, rgba(233, 230, 232, 0.096)80% , rgba(253, 247, 248, 0.363) ),url(IMAGES/bg.webp);
+         
             background-repeat: no-repeat no-repeat;
             background-size: cover ;
             background-position: center;
             background-attachment: fixed;
-            height: 100vh;
+            height: 80vh;
         }
         .timer{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                
+                justify-content: space-around; 
+                height: 80%;
             }
         .box{
           display: inline;
@@ -46,7 +52,7 @@
             display: inline;
             margin: 20px;
         }
-          .button button{
+         .button button{
             background-color: aqua;
         }
         .button button:hover{
@@ -66,11 +72,11 @@
             border: none;
             border-radius: 12px 0;
             padding: 10px;
-             box-shadow: 2px 5px #b39d9d3a;
+             box-shadow: 2px 5px #1809e78a;
              cursor: pointer;
           }
          .play i:hover {
-            color: #13345fe3;
+            color: #09aefafa;
 
             text-shadow: 2px 4px rgba(253, 248, 248, 0);
 
@@ -81,13 +87,12 @@
             font-size: 50px;
            
             margin-top: 20px;
-            text-shadow: 2px 4px #2113e93d;
+            text-shadow: -5px -4px 10px #cd2fec;
 
-            color: rgba(5, 5, 10, 0.884);
+            color: rgb(245, 245, 250);
          }
         
          .play{
-            background-image: linear-gradient(-45deg, rgb(253, 9, 70),rgba(253, 9, 70, 0.664), rgb(4, 231, 252),rgba(4, 231, 252, 0.308) );
             text-align: center;
             height:80px  ;
              width:30%;
@@ -118,17 +123,31 @@
                     }
                     
           }
+
+          @media(max-height: 475px){
+            .container , .play i{
+                        transform: translateY(80px);
+                     
+          }
+          .buttons .button {
+                display: flex;
+                flex-direction: row;
+                    }
+        }
+         
           @media(max-width: 475px){
             .box{
-                  font-size: 80px;
-                  font-weight: 500;
+                  font-size: 90px;
+                  font-weight: 600;
                     }
                     .container{
+                        transform: translateY(20px);
                         height: 300px;
+                        margin: 20px;
                     }
                     .play{
-            background-image: linear-gradient(-45deg, rgb(253, 9, 70),rgba(253, 9, 70, 0.664), rgb(4, 231, 252),rgba(4, 231, 252, 0.308) );
-            margin: 0;
+                        transform: translateY(20px);
+
             height:120px  ;
              width:30%;
              border-radius: 0 0 12px 12px;
@@ -142,41 +161,43 @@
           }
           h1{
               font-size: 50px;
-              font-weight: 400;
+              font-weight: 600;
           }
           .play i {
-             margin: 10px;
+              margin: 20px;
             font-size: 40px;}
         .content{
             display: flex;
             max-width:800px ;
             width: 80%;
             margin: auto;
+            
         }
         .container{
             background:linear-gradient(
 217deg
-, rgba(255, 0, 0, 0.822), rgba(255, 0, 0, 0.288) 70.71%), linear-gradient(
+, rgba(255, 0, 0, 0.822), rgba(15, 14, 14, 0.288) 70.71%), linear-gradient(
 127deg
-, rgba(0, 255, 0, 0.89), rgba(0, 255, 0, 0.308) 70.71%), linear-gradient(
+, rgba(0, 255, 0, 0.89), rgba(3, 3, 3, 0.308) 70.71%), linear-gradient(
 336deg
-, rgba(0, 0, 255, 0.835), rgba(0, 0, 255, 0.288) 70.71%);
+, rgba(0, 0, 255, 0.835), rgba(8, 8, 8, 0.288) 70.71%);
             width: 100%;
             height: 400px;
-            border-radius: 5px;
+            border-radius: 50px;
             align-items: center;
             display: flex;
             justify-content: space-around;
            flex-direction: column;
            justify-self: flex-end;
-
+           box-shadow: -10px -10px 10px #4070f4;
         }
         .timer{
-
-            height: 100vh;
+            
+            position: relative;
+            height: 80vh;
             width: 100%;
             display: flex;
-             justify-content: center; 
+             justify-content: space-around; 
             align-items: center;
         }
     </style>
@@ -184,15 +205,15 @@
 </head>
 <body>
     <div class="aud">
-        <audio src="click.wav" id="click"></audio>
-        <audio src="940.wav" id="fin"></audio>
+        <audio src="Bell_AP1.189.mp3" id="click"></audio>
+        <audio src="DoorbellRing_S08HS.440.mp3" id="fin"></audio>
     </div>
     <nav id="nav" >
         <div class="navbar" id="navbar">
             <div class="logo"><a href="index.html">&lt;! <i class="fas fa-rocket"></i>&gt;</a></div>
             <div class="media">
-                <a href="#"><i class="fa fa-paper-plane"></i></a>
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="Mailto:khalid.elissaoui@um5r.ac.ma"><i class="fa fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/in/khalid-elissaoui-a5bab3183/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
             </div>
         </div> 
@@ -200,8 +221,7 @@
     <div class="content">
         
         <div class="timer">
-            <h1 class="titre">pomodoro</h1> 
-            <div class="container">
+            <div class="container" id="container">
                      <div class="boxes" >
                         <div class="box" id="min">00</div>
                         <h1 class="box">:</h1>
@@ -212,7 +232,6 @@
                     <div class="button"><button type="button"  id="pause" onclick="breaktime()">pause</button> </div>
                     <div class="button"><button type="button"  id="pause long" onclick="longbreak()">pause x 3</button> </div>
                     </div>
-                    
                 </div>
                 <div class="play" > <i class="fas fa-play" id='mybtn' onclick="play()"></i> <i class="fas fa-pause" onclick="pause()"></i></div>
             </div>

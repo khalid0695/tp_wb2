@@ -7,21 +7,28 @@ function play(){
    document.getElementById('click').play();
    t=setInterval(dawon,1000);
    document.getElementById("mybtn").style.display = 'none';
+
 }
+window.addEventListener()
 function dawon(){
+document.title=`${min}min et ${sec}sec online pomodoro`;
    
     display();  
     sec--;
     if(sec<0)   
     {
     sec=59;
-    min--}
+    min--} 
+if(min<5)
+    document.getElementById("container").style.boxShadow="-10px 10px 10px #f44040";
+    else document.getElementById("container").style.boxShadow="-10px 10px 10px #4070f4";
     if(min<0){
     clearInterval(t); 
     document.getElementById('fin').play();
-    document.getElementById("mybtn").style.display = 'inline'; 
+    document.getElementById("mybtn").style.display = 'inline block'; 
      min=25;
      sec=0;
+
 }
 }
 function display(){
