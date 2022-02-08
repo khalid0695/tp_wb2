@@ -308,7 +308,10 @@ section .topic{
 section p{
 		text-align: justify;
     	}
-        section .about-ditails .right img{
+        section .about-ditails .right .logofs{
+			background:linear-gradient(320deg, rgba(10, 10, 10, 0) ,rgba(153, 153, 153, 0) ,rgba(73, 100, 255, 0.185) ) ,url(IMAGES/logofs.png) no-repeat;
+			background-size: cover;
+			background-position: center;
 		width: 400px;
 		height: 400px;
 		border-radius: 20px	;
